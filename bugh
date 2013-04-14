@@ -26,7 +26,7 @@ git_clone = git.bake('clone')
 
 def user_repos(user):
   req = requests.get('https://api.github.com/users/%s/repos?per_page=100' % user)
-  return req.json
+  return req.json()
 
 def clone_repos(repos):
   for repo in repos:
